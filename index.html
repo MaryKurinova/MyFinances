@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Калькулятор</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='main.css'>
+
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>Калькулятор накоплений</h1>
+        <div class="inputs-block">
+            <div class="inputs-block-column">
+                <h6>Доход в месяц</h6>
+                <div class="inputs-wrapper">
+                    <input
+                            type="number"
+                            placeholder="Зарплата"
+                            id="income-salary"
+                            class="input"
+                    >
+                
+                    <input
+                            type="number"
+                            placeholder="Доп. доход"
+                            id="income-extra-1"
+                            class="input"
+                    >
+                </div>
+            </div>
+            <div class="inputs-block-column">
+                <h6>Обязательные расходы</h6>
+                <div class="inputs-wrapper">
+                    <input
+                            type="number"
+                            placeholder="Продукты"
+                            id="costs-kitchen"
+                            class="input"
+                    >
+                    <input
+                            type="number"
+                            placeholder="ЖКХ"
+                            id="costs-house-services"
+                            class="input"
+                    >
+                    <input
+                            type="number"
+                            placeholder="Транспорт"
+                            id="costs-transport"
+                            class="input"
+                    >
+                    <input
+                            type="number"
+                            placeholder="Непредвиденные расходы"
+                            id="costs-credit"
+                            class="input"
+                    >
+                </div>
+            </div>
+            <div class="inputs-block-column">
+                <div class="total-numb">
+                    <h6>Доступно в месяц(без копилки):</h6>
+                    <input
+                            type="number"
+                            class="total"
+                            id="total-month"
+                            value="0"
+                            readonly>
+                </div>
+                <div class="total-numb">
+                    <h6>Доступно в день:</h6>
+                    <input
+                            type="number"
+                            class="total"
+                            id="total-day"
+                            value="0"
+                            readonly>
+                </div>
+                <div class="total-numb">
+                    <h6>Накопим за год:</h6>
+                    <input
+                            type="number"
+                            class="total"
+                            id="total-year"
+                            value="0"
+                            readonly
+                            >
+                </div>
+            </div>
+        </div>
+        <div class="range-block">
+            <h6>Копилка (Сколько откладываем?)</h6>
+            <div class="range-wrapper">
+                <input type="range" min="0" max="100" value="0" id="money-box-range">
+            </div>
+            <div><span id="total-precents">0</span>%</div>
+        </div>
+        <div class="result-block">
+            <div class="total-numb">
+                <h6>Копим:</h6>
+                <input
+                       type="number"
+                       id="accumulation"
+                       value="0"
+                       readonly
+                >
+            </div>
+            <div class="total-numb">
+                <h6>Тратим:</h6>
+                <input type="number" id="spend" value="0" readonly>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
